@@ -1,6 +1,6 @@
-FROM node:20.17.0 as builder
+FROM node:20.17.0-alpine3.20 as builder
 
-WORKDIR /src/app
+WORKDIR /usr/src/app
 COPY package*.json ./
 RUN npm install --production
 COPY . .
