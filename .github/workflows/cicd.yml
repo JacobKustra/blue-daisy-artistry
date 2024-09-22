@@ -26,8 +26,6 @@ jobs:
     steps:
       - name: Pull Image From Docker Hub
         run: docker pull jacobkustra/blue-daisy-artistry:latest
-      - name: Delete Old Container
-        run: docker rm rf blue-daisy-artistry-container
       - name: Run Docker Container
         run: docker run -d -p 3000:3000 --name blue-daisy-artistry-container jacobkustra/blue-daisy-artistry
 
