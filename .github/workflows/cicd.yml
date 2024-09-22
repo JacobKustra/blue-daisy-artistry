@@ -25,7 +25,7 @@ jobs:
     runs-on: self-hosted
     steps:
       - name: Delete Old Container
-        run: docker stop blue-daisy-artistry-container && docker rm rf blue-daisy-artistry-container
+        run: docker stop blue-daisy-artistry-container
       - name: Pull Image From Docker Hub
         run: docker pull jacobkustra/blue-daisy-artistry:latest
       - name: Run Docker Container
